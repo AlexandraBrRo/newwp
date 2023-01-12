@@ -1,0 +1,15 @@
+header{
+  max-height: 100px;
+  width: 100%;
+}
+.info-header{
+  display: flex;
+  max-width: 100%;
+  justify-content: space-around;
+}
+.account-panel,.account-item,.counter-item{
+  display: flex;
+}
+.bag-counter{
+  max-width: 80px;
+}
