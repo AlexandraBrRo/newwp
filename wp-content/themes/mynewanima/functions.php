@@ -102,135 +102,102 @@ add_filter('the_content', 'replace_text');
 
 //add_action('init', 'create_new_user_admin');
 
-function add_post_type_laptop(){
-
-    register_post_type('laptop', array(
-
-            'labels' => array(
-                'name' => __('Ноутбуки'),
-                'singular_name' => __('Ноутбук'),
-                'add_new' => __('Добавити модель ноутбука'),
-                'edit_item' => __('Редагувати ноутбук'),
-            ),
-            'public'      => true,
-            'has_archive' => true,
-            'hierarchical' => true,
-            'menu_icon' => 'dashicons-laptop',
-            'description' => 'some text',
-            'menu_position' => 0,
-            'supports' => array(
-	            'title', 'thumbnail', 'editor',
-            )
-        )
-    );
-	register_taxonomy(
-		'color',
-		'laptop',
-		array(
-			'label' => __('колір'),
-			'hierarchical' => true
-		)
-	);
-	register_taxonomy(
-		'format',
-		'laptop',
-		array(
-			'label' => __('розмір екрану'),
-
-			'hierarchical' => true
-		)
-	);
-	register_taxonomy(
-		'size-screen',
-		'laptop',
-		array(
-			'label' => __('розмір екрану'),
-			'rewrite' => array('slug' => 'size'),
-			'hierarchical' => true
-		)
-	);
-	register_taxonomy(
-		'ram',
-		'laptop',
-		array(
-			'label' => __('розмір оперативної пам`яті'),
-			'hierarchical' => true
-		)
-	);
-	register_taxonomy(
-		'hdd',
-		'laptop',
-		array(
-			'label' => __('розмір внутрішньої пам`яті'),
-			'hierarchical' => true
-		)
-	);
-	register_taxonomy(
-		'processor',
-		'laptop',
-		array(
-			'label' => __('модель процесора'),
-			'hierarchical' => true
-		)
-	);
-	register_taxonomy(
-		'vcard',
-		'laptop',
-		array(
-			'label' => __('модель відеокарти'),
-			'hierarchical' => true
-		)
-	);
-	register_taxonomy(
-		'keyboard',
-		'laptop',
-		array(
-			'label' => __('формат клавіатури'),
-		)
-	);
-}
-
-add_action('init', 'add_post_type_laptop');
-
-//function add_post_type_pets(){
+//function add_post_type_laptop(){
 //
-//    register_post_type('pets', array(
+//    register_post_type('laptop', array(
 //
 //            'labels' => array(
-//                'name' => __('Тип тварини'),
-//                'singular_name' => __('Порода'),
-//                'add_new' => __('Додати тварину'),
-//                'edit_item' => __('Редагувати тварину'),
+//                'name' => __('Ноутбуки'),
+//                'singular_name' => __('Ноутбук'),
+//                'add_new' => __('Добавити модель ноутбука'),
+//                'edit_item' => __('Редагувати ноутбук'),
 //            ),
 //            'public'      => true,
 //            'has_archive' => true,
 //            'hierarchical' => true,
-//            'menu_icon' => 'dashicons-pets',
+//            'menu_icon' => 'dashicons-laptop',
 //            'description' => 'some text',
-//            'menu_position' => 21,
+//            'menu_position' => 0,
 //            'supports' => array(
-//                'title', 'editor', 'thumbnail', 'comments', 'revisions', 'author',
+//	            'title', 'thumbnail', 'editor',
 //            )
 //        )
 //    );
-//    register_taxonomy(
-//        'color',
-//        'pets',
-//        array(
-//            'label' => __('масть'),
-//            'rewrite' => array('slug' => 'color'),
-//        )
-//    );
+//	register_taxonomy(
+//		'color',
+//		'laptop',
+//		array(
+//			'label' => __('колір'),
+//			'hierarchical' => true
+//		)
+//	);
+//	register_taxonomy(
+//		'format',
+//		'laptop',
+//		array(
+//			'label' => __('розмір екрану'),
+//
+//			'hierarchical' => true
+//		)
+//	);
+//	register_taxonomy(
+//		'size-screen',
+//		'laptop',
+//		array(
+//			'label' => __('розмір екрану'),
+//			'rewrite' => array('slug' => 'size'),
+//			'hierarchical' => true
+//		)
+//	);
+//	register_taxonomy(
+//		'ram',
+//		'laptop',
+//		array(
+//			'label' => __('розмір оперативної пам`яті'),
+//			'hierarchical' => true
+//		)
+//	);
+//	register_taxonomy(
+//		'hdd',
+//		'laptop',
+//		array(
+//			'label' => __('розмір внутрішньої пам`яті'),
+//			'hierarchical' => true
+//		)
+//	);
+//	register_taxonomy(
+//		'processor',
+//		'laptop',
+//		array(
+//			'label' => __('модель процесора'),
+//			'hierarchical' => true
+//		)
+//	);
+//	register_taxonomy(
+//		'vcard',
+//		'laptop',
+//		array(
+//			'label' => __('модель відеокарти'),
+//			'hierarchical' => true
+//		)
+//	);
+//	register_taxonomy(
+//		'keyboard',
+//		'laptop',
+//		array(
+//			'label' => __('формат клавіатури'),
+//		)
+//	);
 //}
 //
-//add_action('init', 'add_post_type_pets');
+//add_action('init', 'add_post_type_laptop');
+
 
 function my_first_menu(){
 	register_nav_menus(array(
-			'top_menu' => __('Верхнє меню'),
+			'primary_menu' => __('Верхнє меню'),
 			'bottom_menu' => __('Нижнє меню'),
 			'some_menu'=>__('Середнє'),
-
 	));
 }
 add_action('after_setup_theme', 'my_first_menu');

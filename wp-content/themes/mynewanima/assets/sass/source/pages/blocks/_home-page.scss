@@ -5,3 +5,23 @@ main{
 .wrapper{
   max-width: 1723px;
 }
+.drop_menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .menu{
+    display: flex;
+    list-style: none;
+    gap: 70px;
+    //text-decoration: none;
+
+  }
+}
+a{
+  //text-decoration: none;
+  @include lib-text-decoration-none();
+  @include lib_css(font-weight, $font-weight__small);
+  @include lib-font-size(16);
+  @include lib-line-height(19);
+  color: $color-black;
+}

@@ -50,6 +50,25 @@ main {
   max-width: 1723px;
 }
 
+.drop_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drop_menu .menu {
+  display: flex;
+  list-style: none;
+  gap: 70px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #000;
+}
+
 *, ::after, ::before {
   box-sizing: border-box;
   margin: 0;

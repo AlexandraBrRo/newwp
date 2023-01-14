@@ -1,7 +1,7 @@
 /* Error: Undefined mixin.
  *   ,
- * 2 |     @include reset-typography();
- *   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ * 2 |     @include with-translucent-border(1px 0 0);
+ *   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *   '
  *   style.scss 2:2  root stylesheet */
 
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 2 \2502      @include reset-typography();\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   style.scss 2:2  root stylesheet";
+  content: "Error: Undefined mixin.\a   \2577 \a 2 \2502      @include with-translucent-border(1px 0 0);\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   style.scss 2:2  root stylesheet";
 }
