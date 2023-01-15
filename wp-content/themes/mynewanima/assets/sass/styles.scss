@@ -2,6 +2,8 @@
 
 *, ::after, ::before {
   box-sizing: border-box;
+}
+body{
   margin: 0;
   padding: 0;
 }
@@ -9,6 +11,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 1723px;
 }
 img{
   overflow: hidden;

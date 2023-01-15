@@ -4,8 +4,9 @@ header{
 }
 .info-header{
   display: flex;
-  max-width: 100%;
+  //max-width: 100%;
   justify-content: space-around;
+  padding-top: 37px;
 }
 .account-panel,.account-item,.counter-item{
   display: flex;

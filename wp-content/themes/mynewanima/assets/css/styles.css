@@ -1,4 +1,13 @@
-@font-face {}
+@font-face {
+  font-family: santral;
+  src: url("/wp-content/themes/mynewanima/assets/fonts/santral");
+  font-weight: normal;
+}
+@font-face {
+  font-family: santral;
+  src: url("/wp-content/themes/mynewanima/assets/fonts/santral");
+  font-weight: normal;
+}
 /**
  * Transition
  */
@@ -30,8 +39,8 @@ header {
 
 .info-header {
   display: flex;
-  max-width: 100%;
   justify-content: space-around;
+  padding-top: 37px;
 }
 
 .account-panel, .account-item, .counter-item {
@@ -67,10 +76,30 @@ a {
   font-size: 1rem;
   line-height: 1.1875rem;
   color: #000;
+  font-family: "santral";
+}
+
+.hero-title {
+  width: 636px;
+}
+.hero-title .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 145px;
+  padding-bottom: 35px;
+  font-family: "santral";
+  font-weight: 300;
+  font-size: 5.75rem;
+  line-height: 6.25rem;
 }
 
 *, ::after, ::before {
   box-sizing: border-box;
+}
+
+body {
   margin: 0;
   padding: 0;
 }
@@ -79,6 +108,7 @@ a {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 1723px;
 }
 
 img {

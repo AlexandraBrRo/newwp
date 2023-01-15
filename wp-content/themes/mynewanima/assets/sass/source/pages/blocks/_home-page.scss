@@ -13,8 +13,6 @@ main{
     display: flex;
     list-style: none;
     gap: 70px;
-    //text-decoration: none;
-
   }
 }
 a{
@@ -24,4 +22,21 @@ a{
   @include lib-font-size(16);
   @include lib-line-height(19);
   color: $color-black;
+  font-family: $font-family__santral;
+}
+
+.hero-title{
+  width: 636px;
+  .title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 145px;
+    padding-bottom: 35px;
+    font-family: $font-family__santral;
+    @include lib_css(font-weight, $font-weight__light);
+    @include lib-font-size(92);
+    @include lib-line-height(100);
+  }
 }
