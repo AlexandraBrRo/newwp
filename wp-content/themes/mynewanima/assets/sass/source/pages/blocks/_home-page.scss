@@ -24,13 +24,20 @@ a{
   color: $color-black;
   font-family: $font-family__santral;
 }
-
+.hero-block{
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;;
+}
 .hero-title{
-  width: 636px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
   .title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 657px;
     text-align: center;
     padding-top: 145px;
     padding-bottom: 35px;
@@ -39,4 +46,35 @@ a{
     @include lib-font-size(92);
     @include lib-line-height(100);
   }
+  .title-img-block{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    .additional-img{
+      position: absolute;
+      top: 214px;
+      left: -114px;
+      z-index: 5;
+    }
+  }
+}
+.btn-panel{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1395px;
+  position: absolute;
+  top: 1193px;
+  left: 10px;
+}
+.social-panel{
+  display: flex;
+  gap: 24px;
+}
+
+//
+
+.about-product{
+  display: flex;
+  gap: 395px;
 }

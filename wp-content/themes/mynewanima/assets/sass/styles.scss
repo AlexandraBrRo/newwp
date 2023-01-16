@@ -5,15 +5,23 @@
 }
 body{
   margin: 0;
-  padding: 0;
+  //padding: 0;
 }
 .wrapper{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 1723px;
+  //max-width: 1720px;
+
 }
 img{
   overflow: hidden;
   height: auto;
+}
+.centered{
+  max-width: 1387px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }

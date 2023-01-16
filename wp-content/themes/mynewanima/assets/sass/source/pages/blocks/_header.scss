@@ -3,10 +3,17 @@ header{
   width: 100%;
 }
 .info-header{
+  max-width: 1920px;
   display: flex;
-  //max-width: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 37px;
+  gap: 330px;
+  .transparent{
+    border: none;
+    background: darkgrey;
+
+  }
 }
 .account-panel,.account-item,.counter-item{
   display: flex;

@@ -38,9 +38,16 @@ header {
 }
 
 .info-header {
+  max-width: 1920px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 37px;
+  gap: 330px;
+}
+.info-header .transparent {
+  border: none;
+  background: darkgrey;
 }
 
 .account-panel, .account-item, .counter-item {
@@ -79,13 +86,22 @@ a {
   font-family: "santral";
 }
 
+.hero-block {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .hero-title {
-  width: 636px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
 }
 .hero-title .title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 657px;
   text-align: center;
   padding-top: 145px;
   padding-bottom: 35px;
@@ -94,6 +110,37 @@ a {
   font-size: 5.75rem;
   line-height: 6.25rem;
 }
+.hero-title .title-img-block {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.hero-title .title-img-block .additional-img {
+  position: absolute;
+  top: 214px;
+  left: -114px;
+  z-index: 5;
+}
+
+.btn-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1395px;
+  position: absolute;
+  top: 1193px;
+  left: 10px;
+}
+
+.social-panel {
+  display: flex;
+  gap: 24px;
+}
+
+.about-product {
+  display: flex;
+  gap: 395px;
+}
 
 *, ::after, ::before {
   box-sizing: border-box;
@@ -101,19 +148,25 @@ a {
 
 body {
   margin: 0;
-  padding: 0;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  max-width: 1723px;
 }
 
 img {
   overflow: hidden;
   height: auto;
+}
+
+.centered {
+  max-width: 1387px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=styles.css.map */

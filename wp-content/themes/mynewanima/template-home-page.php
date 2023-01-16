@@ -8,7 +8,10 @@ get_header();
 <?php
 $heroSection = get_field('hero_section');
 $heroTitle = $heroSection['title'];
-
+$heroImg = $heroSection['title-img'];
+$heroImgAdditional = $heroSection['title-img-additional'];
+$heroNewArrival = get_field('hero_new_arrivals');
+$newArrivalTitle = $heroNewArrival['title_pages'];
 
 ?>
 
@@ -26,17 +29,46 @@ wp_nav_menu($args);
 
 <?php
 $menuBtn = get_field('button-main', 'options');
-
 ?>
+
+
+
 
 <main>
 	<div class="wrapper">
         <div class="hero-block">
             <div class="hero-title">
                 <h1 class="title"><?= $heroTitle ?></h1>
+                <div class="title-img-block">
+                    <img class="additional-img" src="http://newwp/wp-content/uploads/2023/01/philippe.png">
+                    <img class="title-img" src="http://newwp/wp-content/uploads/2023/01/img-2.png">
+                </div>
             </div>
-            <a href="<?= $menuBtn['url'] ?>"target="<?= $menuBtn['target'] ?>">View all arrivals</a>
+            <div class="btn-panel">
+                <div class="social-panel">
+                    <a href="#"><img src="<?= SVG_PATH ?>/fb.svg"></a>
+                    <a href="#"><img src="<?= SVG_PATH ?>/insta.svg"></a>
+                    <a href="#"><img src="<?= SVG_PATH ?>/tviter.svg"></a>
+                </div>
+                <a href="<?= $menuBtn['url'] ?>"target="<?= $menuBtn['target'] ?>">Look colection <img src="<?= SVG_PATH ?>/arrow.svg"></a>
+            </div>
         </div>
+        <div class="arrivals-block">
+            <div class="centered">
+                <div class="about-product">
+                    <h1 class="title"><?= $newArrivalTitle ?></h1>
+	                <?= wp_nav_menu($args)?>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
 
 		<?php get_footer();?>
 	</div>
