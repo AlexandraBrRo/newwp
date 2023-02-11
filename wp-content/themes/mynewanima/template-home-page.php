@@ -6,6 +6,12 @@ get_header();
 ?>
 
 <?php
+//wp_enqueue_style('owl-css', CSS_PATH . '/dist/owl.carousel.min.css','1.0.0', true);
+//wp_enqueue_script('owl-carousel',JS_PATH . '/dist/owl.carousel.min.js', ['jquery'], true);
+//wp_enqueue_script('product',JS_PATH . '/slider-owl.js', ['jquery'], '1.0.0',true);
+//?>
+
+<?php
 $heroSection = get_field('hero_section');
 $heroTitle = $heroSection['title'];
 $heroImg = $heroSection['title-img'];

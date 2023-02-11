@@ -75,123 +75,53 @@ function replace_text($text){
 }
 add_filter('the_content', 'replace_text');
 
-/*
-* Create an admin user silently
-*/
 
-//function create_new_user_admin() {
-//	$username = 'test';
-//	$password = 'test123';
-//	$email = '';
-//
-//	if (username_exists($username) == null && email_exists($email) == false) {
-//
-//		// Create the new user
-//		$user_id = wp_create_user($username, $password, $email);
-//
-//		// Get current user object
-//		$user = get_user_by('id', $user_id);
-//
-//		// Remove role
-//		$user->remove_role('subscriber');
-//
-//		// Add role
-//		$user->add_role('administrator');
-//	}
-//}
+function add_post_type_jewerly() {
+	register_post_type('rings', array(
+		'labels'=>array(
+			'name' => __('Каблучка'),
+			'singular_name' => __('Каблучка'),
+			'add_new' => __('Додати каблучку'),
+			'edit_item' => __('Редагувати каблучку')
+		),
+		'public' => true,
+		'hierarchical' => true,
+		'has_archive' => true,
+		'menu_icon' => 'dashicons-awards',
+		'menu_position' => 5,
+		'supports' => array(
+			'title', 'thumbnail', 'editor', 'custom-fields'
+		)
+	));
 
-//add_action('init', 'create_new_user_admin');
+	register_taxonomy(
+		'material',
+		'rings',
+		array(
+			'label' => __('метал'),
+			'rewrite' => array('slug' => 'metall'),
+			'hierarchical' => true,
+		)
+	);
+	register_taxonomy(
+		'size',
+		'rings',
+		array(
+			'label' => __('Розмір'),
+			'hierarchical' => true,
+		)
+	);
+	register_taxonomy(
+		'stone',
+		'rings',
+		array(
+			'label' => __('камінь'),
+			'hierarchical' => true,
 
-//function add_post_type_laptop(){
-//
-//    register_post_type('laptop', array(
-//
-//            'labels' => array(
-//                'name' => __('Ноутбуки'),
-//                'singular_name' => __('Ноутбук'),
-//                'add_new' => __('Добавити модель ноутбука'),
-//                'edit_item' => __('Редагувати ноутбук'),
-//            ),
-//            'public'      => true,
-//            'has_archive' => true,
-//            'hierarchical' => true,
-//            'menu_icon' => 'dashicons-laptop',
-//            'description' => 'some text',
-//            'menu_position' => 0,
-//            'supports' => array(
-//	            'title', 'thumbnail', 'editor',
-//            )
-//        )
-//    );
-//	register_taxonomy(
-//		'color',
-//		'laptop',
-//		array(
-//			'label' => __('колір'),
-//			'hierarchical' => true
-//		)
-//	);
-//	register_taxonomy(
-//		'format',
-//		'laptop',
-//		array(
-//			'label' => __('розмір екрану'),
-//
-//			'hierarchical' => true
-//		)
-//	);
-//	register_taxonomy(
-//		'size-screen',
-//		'laptop',
-//		array(
-//			'label' => __('розмір екрану'),
-//			'rewrite' => array('slug' => 'size'),
-//			'hierarchical' => true
-//		)
-//	);
-//	register_taxonomy(
-//		'ram',
-//		'laptop',
-//		array(
-//			'label' => __('розмір оперативної пам`яті'),
-//			'hierarchical' => true
-//		)
-//	);
-//	register_taxonomy(
-//		'hdd',
-//		'laptop',
-//		array(
-//			'label' => __('розмір внутрішньої пам`яті'),
-//			'hierarchical' => true
-//		)
-//	);
-//	register_taxonomy(
-//		'processor',
-//		'laptop',
-//		array(
-//			'label' => __('модель процесора'),
-//			'hierarchical' => true
-//		)
-//	);
-//	register_taxonomy(
-//		'vcard',
-//		'laptop',
-//		array(
-//			'label' => __('модель відеокарти'),
-//			'hierarchical' => true
-//		)
-//	);
-//	register_taxonomy(
-//		'keyboard',
-//		'laptop',
-//		array(
-//			'label' => __('формат клавіатури'),
-//		)
-//	);
-//}
-//
-//add_action('init', 'add_post_type_laptop');
-
+		)
+	);
+}
+add_action('init','add_post_type_jewerly');
 
 function my_first_menu(){
 	register_nav_menus(array(

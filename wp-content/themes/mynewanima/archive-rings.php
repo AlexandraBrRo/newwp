@@ -1,7 +1,7 @@
 <?php
 get_header();
-//$args = array('post_type'=> 'laptop', 'post_par_page'=>3, );
-//$loop = new WP_Query($args);
+$args = array('post_type'=> 'jewerly', 'post_par_page'=>3, );
+$loop = new WP_Query($args);
 
 ?>
 
