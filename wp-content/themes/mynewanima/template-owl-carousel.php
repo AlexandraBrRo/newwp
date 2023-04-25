@@ -19,7 +19,30 @@ $loop = new WP_Query($args);
 
 ?>
 <div class="wrapper">
+    <div class="owl-carousel owl-theme">
+	<?php
+	while ($loop->have_posts()) : $loop->the_post();
+	?>
+        <div class="product item">
+            <div class="thumbnail-product"><?php the_post_thumbnail('50px');?></div>
+	        <?php
+	        the_title();
+            echo '<div class="description">';
+            the_content();
+	        ?> <a href="<?php the_permalink();?>">link</a><?php
+	        echo '</div></div>';
+	        endwhile;
+	        ?>
+        </div>
+    </div>
 
+    <div class="owl-carousel owl-theme">
+        <div class="item"><h4>1</h4></div>
+        <div class="item"><h4>2</h4></div>
+        <div class="item"><h4>3</h4></div>
+        <div class="item"><h4>4</h4></div>
+
+    </div>
 </div>
 
 

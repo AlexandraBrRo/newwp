@@ -5,6 +5,12 @@ main{
 .wrapper{
   max-width: 1723px;
 }
+.background-wrapper{
+  background-image: url("../images/animaJewelryBg.png");
+  background-repeat: no-repeat;
+  max-height: 600px;
+  height: 100%;
+}
 .drop_menu{
   display: flex;
   justify-content: center;
@@ -77,4 +83,36 @@ a{
 .about-product{
   display: flex;
   gap: 395px;
+}
+
+/*slick slider*/
+
+.slick-track{
+  display: flex;
+  //align-items: flex-start;
+}
+.slick-list{
+  overflow: hidden;
+}
+.arrivals-carousel{
+  position: relative;
+  padding: 0px 50px;
+  .slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    font-size: 0;
+    width: 32px;
+    height: 32px;
+  }
+  .slick-prev{
+    left: 0;
+    border: none;
+    background: url('../images/svg/arrow_left.svg') 0 0 / 100% no-repeat;
+  }
+  .slick-next{
+    right: 0;
+    border: none;
+    background: url('../images/svg/arrow_right.svg') 0 0 / 100%  no-repeat;
+  }
 }

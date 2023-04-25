@@ -155,3 +155,4 @@ function someMyFunc(){
 }
 
 add_action('my_hook_for_course', 'someMyFunc');
+

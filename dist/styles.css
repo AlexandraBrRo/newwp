@@ -1,0 +1,183 @@
+@font-face {
+  font-family: santral;
+  src: url("/wp-content/themes/mynewanima/assets/fonts/santral");
+  font-weight: normal;
+}
+@font-face {
+  font-family: santral;
+  src: url("/wp-content/themes/mynewanima/assets/fonts/santral");
+  font-weight: normal;
+}
+/**
+ * Transition
+ */
+/**
+ * Box shadow
+ */
+/**
+ * Double box shadow
+ */
+/**
+ * Remove box-shadow (for overruling box shadow mixin)
+ */
+/**
+ * Border radius
+ */
+/**
+ * Retina background images
+ */
+/**
+ * Creates a CSS arrow
+ */
+/**
+ * Creates a CSS arrow with a border
+ */
+header {
+  max-height: 100px;
+  width: 100%;
+}
+
+.info-header {
+  max-width: 1920px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 37px;
+  gap: 330px;
+}
+.info-header .transparent {
+  border: none;
+  background: darkgrey;
+}
+
+.account-panel, .account-item, .counter-item {
+  display: flex;
+}
+
+.bag-counter {
+  max-width: 80px;
+}
+
+main {
+  max-width: 1920px;
+}
+
+.wrapper {
+  max-width: 1723px;
+}
+
+.background-wrapper {
+  background-image: url("../images/animaJewelryBg.png");
+  background-repeat: no-repeat;
+  max-height: 600px;
+  height: 100%;
+}
+
+.drop_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drop_menu .menu {
+  display: flex;
+  list-style: none;
+  gap: 70px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  color: #000;
+  font-family: "santral";
+}
+
+.hero-block {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero-title {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+}
+.hero-title .title {
+  width: 657px;
+  text-align: center;
+  padding-top: 145px;
+  padding-bottom: 35px;
+  font-family: "santral";
+  font-weight: 300;
+  font-size: 5.75rem;
+  line-height: 6.25rem;
+}
+.hero-title .title-img-block {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.hero-title .title-img-block .additional-img {
+  position: absolute;
+  top: 214px;
+  left: -114px;
+  z-index: 5;
+}
+
+.btn-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1395px;
+  position: absolute;
+  top: 1193px;
+  left: 10px;
+}
+
+.social-panel {
+  display: flex;
+  gap: 24px;
+}
+
+.about-product {
+  display: flex;
+  gap: 395px;
+}
+
+.arrivals-block {
+  background-color: red;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  overflow: hidden;
+  height: auto;
+}
+
+.centered {
+  max-width: 1387px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/*# sourceMappingURL=styles.css.map */
