@@ -42,16 +42,7 @@ a{
   flex-direction: column;
   justify-content: center;
   align-content: space-around;
-  .title{
-    width: 657px;
-    text-align: center;
-    padding-top: 145px;
-    padding-bottom: 35px;
-    font-family: $font-family__santral;
-    @include lib_css(font-weight, $font-weight__light);
-    @include lib-font-size(92);
-    @include lib-line-height(100);
-  }
+
   .title-img-block{
     display: flex;
     justify-content: center;
@@ -63,6 +54,16 @@ a{
       z-index: 5;
     }
   }
+}
+.title{
+  width: 657px;
+  text-align: center;
+  padding-top: 145px;
+  padding-bottom: 35px;
+  font-family: $font-family__santral;
+  @include lib_css(font-weight, $font-weight__light);
+  @include lib-font-size(92);
+  @include lib-line-height(100);
 }
 .btn-panel{
   display: flex;
@@ -83,9 +84,25 @@ a{
 .about-product{
   display: flex;
   gap: 395px;
+  .drop_menu{
+    padding-top: 100px;
+  }
+}
+
+.title-arrivals{
+  //width: 294px;
+  width: 407px;
+  text-align: inherit;
+  padding-left: 110px;
 }
 
 /*slick slider*/
+
+.slick-slider{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 .slick-track{
   display: flex;
@@ -96,7 +113,16 @@ a{
 }
 .arrivals-carousel{
   position: relative;
-  padding: 0px 50px;
+  padding: 0 50px;
+  display: flex;
+  //flex: 0 0 auto;
+  img{
+    width: 100%;
+    display: block;
+    //height: auto;
+    //position: absolute;
+  }
+
   .slick-arrow{
     position: absolute;
     top: 50%;
@@ -106,13 +132,35 @@ a{
     height: 32px;
   }
   .slick-prev{
-    left: 0;
+    left: 1136px;
+    top: -44px;
     border: none;
     background: url('../images/svg/arrow_left.svg') 0 0 / 100% no-repeat;
   }
   .slick-next{
-    right: 0;
+    right: 162px;
+    top: -44px;
     border: none;
     background: url('../images/svg/arrow_right.svg') 0 0 / 100%  no-repeat;
+  }
+}
+
+//
+
+.btn-arrivals{
+  display: flex;
+  justify-content: flex-end;
+  height: 48px;
+
+  .btn-border{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 0 37px;
   }
 }

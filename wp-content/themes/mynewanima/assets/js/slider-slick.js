@@ -2,10 +2,8 @@
 $(document).ready(function (){
     $('.arrivals-carousel').slick({
         arrows:true,
-        dots:false,
-        adaptiveHeight:false,
-        slidesToShow:2,
-        slidesToScroll:2,
+        slidesToShow:4,
+        slidesToScroll:4,
         speed:1000,
         easing:'ease',
         infinitive: true,
@@ -16,10 +14,6 @@ $(document).ready(function (){
         pauseOnDotsHover:true,
         draggable: false,
         swipe:true,
-        waitForAnimate:false,
-        centerMode:false,
-        variableWidth:false,
-        rows:2,
         slidesPerRow:1,
         responsive:[
             {
@@ -27,18 +21,19 @@ $(document).ready(function (){
                 settings:{
                     sliderToShow:2,
                     slidesToScroll:1,
-                    rows:1,
+
                 }
             }, {
                 breakpoint: 480,
                 settings: {
                     sliderToShow: 1,
                     slidesToScroll: 1,
-                    rows: 1,
+
                 },
             }
         ],
         mobileFirst:false,
-        appendArrows:$('.arrivals-img')
+        // appendArrows:$('.slick-button')
     });
+
 });

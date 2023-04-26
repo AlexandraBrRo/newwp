@@ -107,16 +107,6 @@ a {
   justify-content: center;
   align-content: space-around;
 }
-.hero-title .title {
-  width: 657px;
-  text-align: center;
-  padding-top: 145px;
-  padding-bottom: 35px;
-  font-family: "santral";
-  font-weight: 300;
-  font-size: 5.75rem;
-  line-height: 6.25rem;
-}
 .hero-title .title-img-block {
   display: flex;
   justify-content: center;
@@ -127,6 +117,17 @@ a {
   top: 214px;
   left: -114px;
   z-index: 5;
+}
+
+.title {
+  width: 657px;
+  text-align: center;
+  padding-top: 145px;
+  padding-bottom: 35px;
+  font-family: "santral";
+  font-weight: 300;
+  font-size: 5.75rem;
+  line-height: 6.25rem;
 }
 
 .btn-panel {
@@ -148,8 +149,22 @@ a {
   display: flex;
   gap: 395px;
 }
+.about-product .drop_menu {
+  padding-top: 100px;
+}
+
+.title-arrivals {
+  width: 407px;
+  text-align: inherit;
+  padding-left: 110px;
+}
 
 /*slick slider*/
+.slick-slider {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .slick-track {
   display: flex;
 }
@@ -160,7 +175,12 @@ a {
 
 .arrivals-carousel {
   position: relative;
-  padding: 0px 50px;
+  padding: 0 50px;
+  display: flex;
+}
+.arrivals-carousel img {
+  width: 100%;
+  display: block;
 }
 .arrivals-carousel .slick-arrow {
   position: absolute;
@@ -171,14 +191,33 @@ a {
   height: 32px;
 }
 .arrivals-carousel .slick-prev {
-  left: 0;
+  left: 1136px;
+  top: -44px;
   border: none;
   background: url("../images/svg/arrow_left.svg") 0 0/100% no-repeat;
 }
 .arrivals-carousel .slick-next {
-  right: 0;
+  right: 162px;
+  top: -44px;
   border: none;
   background: url("../images/svg/arrow_right.svg") 0 0/100% no-repeat;
+}
+
+.btn-arrivals {
+  display: flex;
+  justify-content: flex-end;
+  height: 48px;
+}
+.btn-arrivals .btn-border {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  padding: 0 37px;
 }
 
 *, ::after, ::before {
