@@ -162,7 +162,6 @@ a {
 /*slick slider*/
 .slick-slider {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .slick-track {
@@ -203,6 +202,10 @@ a {
   background: url("../images/svg/arrow_right.svg") 0 0/100% no-repeat;
 }
 
+.slider-wrapper {
+  display: flex;
+}
+
 .btn-arrivals {
   display: flex;
   justify-content: flex-end;
@@ -218,6 +221,67 @@ a {
   border: 1px solid #000000;
   border-radius: 4px;
   padding: 0 37px;
+}
+
+.collections-block {
+  margin-bottom: 187px;
+}
+
+.title-collections {
+  display: flex;
+  justify-content: center;
+}
+
+.collection-img-block {
+  display: flex;
+  justify-content: center;
+}
+.collection-img-block .collection-img {
+  position: relative;
+}
+.collection-img-block .img-left-txt {
+  position: absolute;
+  top: 559px;
+  left: 160px;
+  z-index: 50;
+}
+.collection-img-block .img-center-txt {
+  position: absolute;
+  top: 229px;
+  left: 133px;
+  z-index: 50;
+}
+.collection-img-block .img-center2-txt {
+  position: absolute;
+  top: 775px;
+  left: 252px;
+  z-index: 50;
+}
+.collection-img-block .img-right-txt {
+  position: absolute;
+  top: 396px;
+  left: 162px;
+  z-index: 50;
+}
+.collection-img-block .img-right2-txt {
+  position: absolute;
+  top: 943px;
+  left: 158px;
+  z-index: 50;
+}
+.collection-img-block .center-img-part {
+  padding-left: 102px;
+  padding-right: 102px;
+}
+.collection-img-block .img-center, .collection-img-block .img-right {
+  padding-bottom: 50px;
+}
+
+.collection-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: -110px;
+  margin-bottom: 100px;
 }
 
 *, ::after, ::before {
