@@ -284,6 +284,59 @@ a {
   margin-bottom: 100px;
 }
 
+.favorites-block {
+  margin-bottom: 200px;
+}
+
+.title-favorites-block .title {
+  margin: 0 auto;
+}
+
+.holder-price {
+  display: flex;
+  flex: 0 0 auto;
+}
+.holder-price .info-part {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+  padding: 0;
+  gap: 36px;
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+.holder-price .info-part .sale-part {
+  padding-left: 33px;
+}
+.holder-price .info-part .sale-part > a {
+  font-family: "Blacker Sans Display Trial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.holder-price .info-part .price-part > a {
+  font-family: "Santral";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 28px;
+  line-height: 150%;
+  text-align: center;
+}
+.holder-price .info-part .discount-btn {
+  padding-left: 112px;
+}
+.holder-price img {
+  width: 100%;
+  display: block;
+  height: auto;
+  overflow: hidden;
+}
+
 *, ::after, ::before {
   box-sizing: border-box;
 }

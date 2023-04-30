@@ -25,6 +25,10 @@ $titleCollections = $heroCollections['title_collections'];
 $imgPartCollections = $heroCollections['collection_img'];
 $heroFavorites = get_field('hero_favorites');
 $titleFavorites = $heroFavorites['title_favorites'];
+$heroPrice = get_field('hero_price');
+//$imgPrice = $heroPrice['price_image'];
+$titlePrice = $heroPrice['best_price_title'];
+$txtPrice = $heroPrice['best_price'];
 
 ?>
 
@@ -68,6 +72,7 @@ $arrivalsBtn = get_field('button_arrivals', 'options');
                     <a href="<?= $menuBtn['url'] ?>"target="<?= $menuBtn['target'] ?>">Look colection <img src="<?= SVG_PATH ?>/arrow.svg"></a>
                 </div>
             </div>
+
             <div class="arrivals-block">
                 <div class="centered">
                     <div class="arrivals-carousel-block">
@@ -75,85 +80,30 @@ $arrivalsBtn = get_field('button_arrivals', 'options');
                             <h1 class="title title-arrivals"><?= $newArrivalTitle ?></h1>
 		                    <?= wp_nav_menu($args)?>
                         </div>
-<!--                            <div class="slick-button"></div>-->
-                        <!--<button class="prev"><img src="--><?//= SVG_PATH ?><!--/arrow_left.svg"></button>-->
-                        <!--<button class="next"><img src="--><?//= SVG_PATH ?><!--/arrow_right.svg"></button>-->
-                        <div class="rings-carousel arrivals-carousel">
-                            <div class="slider-wrapper">
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet-1.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet2-1.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet3.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet4.png">
-                                </div>
+                            <div class="rings-carousel arrivals-carousel">
+<!--                             <div class="slider-wrapper">-->
+                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet-1.png">  </div>
+                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet2-1.png"></div>
+                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet3.png"> </div>
+                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet4.png"> </div>
+
+                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings12.png"></div>
+                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings11.png"></div>
+                                <div class="slider-item"> <img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings10.png"></div>
+                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings9.png"></div>
+
+                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings8.png"></div>
+                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings7.png"></div>
+                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings6.png"></div>
+                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings5.png"></div>
+
+                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings4.png"></div>
+                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings3.png"></div>
+                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings2.png"></div>
+                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings1.png"></div>
+<!--                            </div>-->
                             </div>
 
-                            <div class="slider-wrapper">
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet-1.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet2-1.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet3.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet4.png">
-                                </div>
-                            </div>
-
-                            <div class="slider-wrapper">
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings12.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings11.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings10.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings9.png">
-                                </div>
-                            </div>
-
-                            <div class="slider-wrapper">
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings8.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings7.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings6.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings5.png">
-                                </div>
-                            </div>
-
-                            <div class="slider-wrapper">
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings4.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings3.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings2.png">
-                                </div>
-                                <div class="slider-item">
-                                    <img class="" data-lazy="http://newwp/wp-content/uploads/2023/02/rings1.png">
-                                </div>
-                            </div>
-                        </div>
                         <div class="btn-arrivals">
                             <a class="main-btn btn-border" href="<?= $arrivalsBtn['url'] ?>"target="<?= $arrivalsBtn['target'] ?>">View all arrivals</a>
                         </div>
@@ -189,13 +139,38 @@ $arrivalsBtn = get_field('button_arrivals', 'options');
                     </div>
                 </div>
             </div>
+
             <div class="favorites-block">
                 <div class="centered">
                     <div class="title-favorites-block">
-                        <h1 class="title"><?=$heroFavorites?></h1>
-                    </div
-                </div>
+                        <h1 class="title"><?= $titleFavorites ?></h1>
+                    </div>
 
+                    <div class="btn-arrivals favorites-btn">
+                        <a class="main-btn btn-border" href="<?= $arrivalsBtn['url'] ?>"target="<?= $arrivalsBtn['target'] ?>">View all collections</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="discount-block">
+                <div class="centered">
+                    <div class="holder-price">
+                        <div class="img-part">
+                            <img src="http://newwp/wp-content/uploads/2023/05/discount.png">
+                        </div>
+                        <div class="info-part">
+                            <div class="sale-part">
+                                <a><?= $titlePrice ?></a>
+                            </div>
+                            <div class="price-part">
+                                <a><?= $txtPrice ?></a>
+                            </div>
+                            <div class="btn-arrivals discount-btn">
+                                <a class="main-btn btn-border" href="<?= $arrivalsBtn['url'] ?>"target="<?= $arrivalsBtn['target'] ?>">Buy now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
