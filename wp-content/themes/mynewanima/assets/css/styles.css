@@ -38,16 +38,25 @@ header {
 }
 
 .info-header {
-  max-width: 1920px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 37px;
   gap: 330px;
+  padding: 37px 100px 0;
 }
 .info-header .transparent {
   border: none;
-  background: darkgrey;
+  cursor: pointer;
+  height: 32px;
+}
+.info-header .search-holder {
+  position: relative;
+}
+.info-header .dandruff {
+  position: absolute;
+  top: 2px;
+  left: -30px;
+  z-index: 50;
 }
 
 .account-panel, .account-item, .counter-item {
@@ -56,6 +65,13 @@ header {
 
 .bag-counter {
   max-width: 80px;
+}
+
+.logo-img {
+  overflow: hidden;
+  display: block;
+  height: auto;
+  padding-left: 177px;
 }
 
 main {
@@ -77,6 +93,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
 }
 .drop_menu .menu {
   display: flex;
@@ -143,6 +160,15 @@ a {
 .social-panel {
   display: flex;
   gap: 24px;
+}
+
+.social-link {
+  position: relative;
+}
+.social-link .social-svg {
+  position: absolute;
+  top: 0;
+  right: -17px;
 }
 
 .about-product {
@@ -310,7 +336,7 @@ a {
   padding-left: 33px;
 }
 .holder-price .info-part .sale-part > a {
-  font-family: "Blacker Sans Display Trial";
+  font-family: "Blacker Sans Display Trial", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 52px;
@@ -335,6 +361,54 @@ a {
   display: block;
   height: auto;
   overflow: hidden;
+}
+
+.discount-block {
+  margin-bottom: 200px;
+}
+
+.arrow-link {
+  position: relative;
+}
+.arrow-link .arrow {
+  width: 28px;
+  height: 19px;
+  position: absolute;
+  top: 76px;
+  left: 157px;
+}
+
+.showroom-title {
+  padding: 0 !important;
+}
+.showroom-title > h1, .showroom-title .a {
+  text-align: left;
+  padding: 0;
+}
+
+.title2 {
+  font-family: "Blacker Sans Display Trial";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 75px;
+  line-height: 100%;
+  margin: 0;
+}
+
+.txt-showroom {
+  font-family: "Santral";
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.showroom-part {
+  margin-right: 178px;
+}
+
+.showroom-link {
+  padding-top: 72px;
 }
 
 *, ::after, ::before {

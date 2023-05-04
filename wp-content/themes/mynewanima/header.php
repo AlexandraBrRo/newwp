@@ -7,10 +7,10 @@
     <div class="wrapper">
         <div class="info-header">
             <div class="search-holder">
-                <img src="<?= SVG_PATH ?>/dandruff.svg">
+                <img class="dandruff" src="<?= SVG_PATH ?>/dandruff.svg">
                 <input class="transparent" type="search" id="">
             </div>
-            <img src="<?= SVG_PATH ?>/logo.svg" alt="logo">
+            <img class="logo-img" src="<?= SVG_PATH ?>/logo.svg" alt="logo">
             <div class="account-panel">
                 <div class="account-item">
                     <img src="<?= SVG_PATH ?>/man.svg">

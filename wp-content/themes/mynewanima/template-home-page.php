@@ -18,18 +18,10 @@ $heroSection = get_field('hero_section');
 $heroTitle = $heroSection['title'];
 $heroImg = $heroSection['title-img'];
 $heroImgAdditional = $heroSection['title-img-additional'];
-$heroNewArrival = get_field('hero_new_arrivals');
-$newArrivalTitle = $heroNewArrival['title_new_arrivals'];
-$heroCollections = get_field('hero_collections');
-$titleCollections = $heroCollections['title_collections'];
-$imgPartCollections = $heroCollections['collection_img'];
-$heroFavorites = get_field('hero_favorites');
-$titleFavorites = $heroFavorites['title_favorites'];
-$heroPrice = get_field('hero_price');
-//$imgPrice = $heroPrice['price_image'];
-$titlePrice = $heroPrice['best_price_title'];
-$txtPrice = $heroPrice['best_price'];
-
+$heroSocial = get_field('social_panel');
+$socialFb = $heroSocial['facebook'];
+$socialInsta = $heroSocial['insta'];
+$socialTwitt = $heroSocial['twitter'];
 ?>
 
 <?php
@@ -47,6 +39,7 @@ wp_nav_menu($args);
 <?php
 $menuBtn = get_field('button-main', 'options');
 $arrivalsBtn = get_field('button_arrivals', 'options');
+$linkBtn = get_field('link_button', 'options');
 ?>
 
 
@@ -65,14 +58,18 @@ $arrivalsBtn = get_field('button_arrivals', 'options');
                 </div>
                 <div class="btn-panel">
                     <div class="social-panel">
-                        <a href="!#"><img src="<?= SVG_PATH ?>/fb.svg"></a>
-                        <a href="!#"><img src="<?= SVG_PATH ?>/insta.svg"></a>
-                        <a href="!#"><img src="<?= SVG_PATH ?>/tviter.svg"></a>
+                        <a href="<?= $socialFb ?>"><img src="<?= SVG_PATH ?>/fb.svg"></a>
+                        <a href="<?= $socialInsta ?>"><img src="<?= SVG_PATH ?>/insta.svg"></a>
+                        <a href="<?= $socialTwitt ?>"><img src="<?= SVG_PATH ?>/twitter.svg"></a>
                     </div>
-                    <a href="<?= $menuBtn['url'] ?>"target="<?= $menuBtn['target'] ?>">Look colection <img src="<?= SVG_PATH ?>/arrow.svg"></a>
+                    <a class="social-link" href="<?= $linkBtn['url'] ?>"target="<?= $linkBtn['target'] ?>">Look colection <img class="social-svg" src="<?= SVG_PATH ?>/arrow.svg"></a>
                 </div>
             </div>
+<?php
+$heroNewArrival = get_field('hero_new_arrivals');
+$newArrivalTitle = $heroNewArrival['title_new_arrivals'];
 
+?>
             <div class="arrivals-block">
                 <div class="centered">
                     <div class="arrivals-carousel-block">
@@ -81,27 +78,27 @@ $arrivalsBtn = get_field('button_arrivals', 'options');
 		                    <?= wp_nav_menu($args)?>
                         </div>
                             <div class="rings-carousel arrivals-carousel">
-<!--                             <div class="slider-wrapper">-->
-                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet-1.png">  </div>
-                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet2-1.png"></div>
-                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet3.png"> </div>
-                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet4.png"> </div>
-
-                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings12.png"></div>
-                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings11.png"></div>
-                                <div class="slider-item"> <img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings10.png"></div>
-                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings9.png"></div>
-
-                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings8.png"></div>
-                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings7.png"></div>
-                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings6.png"></div>
-                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings5.png"></div>
-
-                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings4.png"></div>
-                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings3.png"></div>
-                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings2.png"></div>
-                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings1.png"></div>
-<!--                            </div>-->
+                             <div class="slider-wrapper">
+<!--                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet-1.png">  </div>-->
+<!--                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet2-1.png"></div>-->
+<!--                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet3.png"> </div>-->
+<!--                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/03/circlet4.png"> </div>-->
+<!---->
+<!--                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings12.png"></div>-->
+<!--                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings11.png"></div>-->
+<!--                                <div class="slider-item"> <img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings10.png"></div>-->
+<!--                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings9.png"></div>-->
+<!---->
+<!--                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings8.png"></div>-->
+<!--                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings7.png"></div>-->
+<!--                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings6.png"></div>-->
+<!--                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings5.png"></div>-->
+<!---->
+<!--                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings4.png"></div>-->
+<!--                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings3.png"></div>-->
+<!--                                <div class="slider-item"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings2.png"></div>-->
+<!--                                <div class="slider-item one"><img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/02/rings1.png"></div>-->
+                            </div>
                             </div>
 
                         <div class="btn-arrivals">
@@ -110,6 +107,11 @@ $arrivalsBtn = get_field('button_arrivals', 'options');
                     </div>
                 </div>
             </div>
+<?php
+$heroCollections = get_field('hero_collections');
+$titleCollections = $heroCollections['title_collections'];
+$imgPartCollections = $heroCollections['collection_img'];
+?>
             <div class="collections-block">
                 <div class="centered">
                     <div class="title-collections">
@@ -139,7 +141,10 @@ $arrivalsBtn = get_field('button_arrivals', 'options');
                     </div>
                 </div>
             </div>
-
+<?php
+$heroFavorites = get_field('hero_favorites');
+$titleFavorites = $heroFavorites['title_favorites'];
+?>
             <div class="favorites-block">
                 <div class="centered">
                     <div class="title-favorites-block">
@@ -151,7 +156,12 @@ $arrivalsBtn = get_field('button_arrivals', 'options');
                     </div>
                 </div>
             </div>
-
+<?php
+$heroPrice = get_field('hero_price');
+//$imgPrice = $heroPrice['price_image'];
+$titlePrice = $heroPrice['best_price_title'];
+$txtPrice = $heroPrice['best_price'];
+?>
             <div class="discount-block">
                 <div class="centered">
                     <div class="holder-price">
@@ -172,11 +182,29 @@ $arrivalsBtn = get_field('button_arrivals', 'options');
                     </div>
                 </div>
             </div>
-
-
-
-
-
+<?php
+$heroShowroom = get_field('hero_showroom');
+$titleShowroom = $heroShowroom['showroom_title'];
+$txtShowroom = $heroShowroom['txt_showroom'];
+?>
+            <div class="showroom-block">
+                <div class="centered">
+                    <div class="holder-price">
+                        <div class="info-part showroom-part">
+                            <div class="sale-part showroom-title">
+                                <h1 class="title title2"><?= $titleShowroom ?></h1>
+                            </div>
+                            <div class="price-part txt-showroom-part">
+                                <a class="txt-showroom"><?= $txtShowroom ?></a>
+                            </div>
+                            <a class="arrow-link showroom-link" href="<?= $linkBtn['url'] ?>" target="<?= $linkBtn['target'] ?>">Welcome back in-store <img class="arrow" src="<?= SVG_PATH ?>/arrow2.svg"></a>
+                        </div>
+                        <div class="img-part">
+                            <img src="http://newwp/wp-content/uploads/2023/05/showroom.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
             <?php get_footer();?>
