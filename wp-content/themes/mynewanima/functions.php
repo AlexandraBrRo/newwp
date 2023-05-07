@@ -64,18 +64,6 @@ function styles() {
 add_action( 'wp_enqueue_scripts', 'styles' );
 
 
-function replace_text($text){
-	$replace = array(
-		'Lorem' => 'redmonkey',
-		'Alias' => 'sssssss',
-		'amet' => 'aaa'
-	);
-	$text = str_replace(array_keys($replace), $replace, $text);
-	return $text;
-}
-add_filter('the_content', 'replace_text');
-
-
 function add_post_type_jewerly() {
 	register_post_type('rings', array(
 		'labels'=>array(
@@ -155,4 +143,8 @@ function someMyFunc(){
 }
 
 add_action('my_hook_for_course', 'someMyFunc');
+
+
+//acf_add_options_page('Instagram');
+
 

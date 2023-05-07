@@ -58,9 +58,9 @@ $linkBtn = get_field('link_button', 'options');
                 </div>
                 <div class="btn-panel">
                     <div class="social-panel">
-                        <a href="<?= $socialFb ?>"><img src="<?= SVG_PATH ?>/fb.svg"></a>
-                        <a href="<?= $socialInsta ?>"><img src="<?= SVG_PATH ?>/insta.svg"></a>
-                        <a href="<?= $socialTwitt ?>"><img src="<?= SVG_PATH ?>/twitter.svg"></a>
+                        <a href="<?= $socialFb['url'] ?>"><img src="<?= SVG_PATH ?>/fb.svg"></a>
+                        <a href="<?= $socialInsta['url'] ?>"><img src="<?= SVG_PATH ?>/insta.svg"></a>
+                        <a href="<?= $socialTwitt['url'] ?>"><img src="<?= SVG_PATH ?>/twitter.svg"></a>
                     </div>
                     <a class="social-link" href="<?= $linkBtn['url'] ?>"target="<?= $linkBtn['target'] ?>">Look colection <img class="social-svg" src="<?= SVG_PATH ?>/arrow.svg"></a>
                 </div>
@@ -205,6 +205,49 @@ $txtShowroom = $heroShowroom['txt_showroom'];
                     </div>
                 </div>
             </div>
+<?php
+$heroInstagram = get_field('insta_block');
+$instaTitle = $heroInstagram ['insta_title'];
+$instaSub = $heroInstagram ['insta_subtitle'];
+$instLink = $heroInstagram ['insta_link'];
+?>
+            <div class="insta-block">
+                <div class="centered">
+                    <div class="insta-title">
+                        <h1 class="title insta-title"><?= $instaTitle ?></h1>
+                    </div>
+                    <div class="link-group">
+                        <div class="about-link">
+                            <a><?= $instaSub ?></a>
+                        </div>
+                        <div class="insta-link"><a href="<?= $instLink['url'] ?>">anima_jewelry</a></div>
+                    </div>
+                    <div class="insta-carousel">
+                        <div class="slider-wrapper">
+                            <div class="item item-slider">
+                                <img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/05/inastaimg1.png">
+                            </div>
+                            <div class="item item-slider">
+                                <img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/05/inastaimg2.png">
+                            </div>
+                            <div class="item item-slider">
+                                <img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/05/inastaimg3.png">
+                            </div>
+                            <div class="item item-slider">
+                                <img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/05/inastaimg4.png">
+                            </div>
+                            <div class="item item-slider">
+                                <img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/05/inastaimg1.png">
+                            </div>
+                            <div class="item item-slider">
+                                <img class="slider-img" data-lazy="http://newwp/wp-content/uploads/2023/05/inastaimg2.png">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
 
 
             <?php get_footer();?>

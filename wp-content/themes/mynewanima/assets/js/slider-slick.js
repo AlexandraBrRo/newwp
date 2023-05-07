@@ -36,4 +36,21 @@ $(document).ready(function (){
         // appendArrows:$('.slick-button')
     });
 
+    $('.slider-wrapper').slick({
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        autoplay: true,
+        onInit: function() {
+            const sliderItems = $('.slider-wrapper .item-slider');
+            const spacing = 24;
+            sliderItems.each(function(index) {
+                if (index !== sliderItems.length - 1) {
+                    $(this).css('margin-right', spacing + 'px');
+                }
+            });
+        }
+    });
 });
+
+

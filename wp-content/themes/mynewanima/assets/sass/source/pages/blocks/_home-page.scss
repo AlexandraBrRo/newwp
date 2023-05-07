@@ -336,3 +336,73 @@ a{
 .showroom-link{
   padding-top: 72px;
 }
+.link-group{
+  padding-bottom: 46px;
+}
+
+//
+.insta-block{
+  margin-bottom: 200px;
+}
+.insta-title{
+  display: flex;
+  justify-content: center;
+  padding: 200px 0 32px ;
+  margin: 0;
+}
+.link-group{
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+}
+
+//insta slider//
+.slider-wrapper {
+  height: 350px;
+  //width: 90%;
+  max-width: 1387px;
+  margin: 0 auto;
+}
+.item {
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  //padding-right: 24px;
+}
+
+.slick-list, .slick-track, .slick-slide {
+  height: 100%;
+}
+.slick-slider {
+  display: flex !important;
+}
+.slick-slide {
+  outline: none;
+}
+.slick-arrow {
+  cursor: pointer;
+  top: 50%;
+  z-index: 10;
+  font-size: 0;
+  width: 32px;
+  height: 32px;
+}
+.slick-prev{
+  position: absolute;
+  left: 1299px;
+  top: -44px;
+  border: none;
+  background: url('../images/svg/arrow_left.svg') 0 0 / 100% no-repeat;
+}
+.slick-next{
+  position: absolute;
+  right: 3px;
+  top: -44px;
+  border: none;
+  background: url('../images/svg/arrow_right.svg') 0 0 / 100%  no-repeat;
+}
+.insta-carousel{
+  position: relative;
+  display: flex;
+}
