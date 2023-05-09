@@ -1,0 +1,131 @@
+@import "home-page";
+
+footer{
+  background-color: $footer-bg-color;
+
+}
+
+.light{
+  color: $main-button-text-color;
+  >h1{
+    cursor: pointer;
+  }
+}
+.shade{
+  color: $footer-line-color;
+}
+.email-block{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 108px;
+  .txt-style{
+    font-family: 'Santral-Medium';
+    font-size: 16px;
+    line-height: 100%;
+  }
+  .email-style{
+    font-family: 'Blacker Sans Display Trial';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 100%;
+  }
+}
+.info-holder{
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-name{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.phone-link {
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 21px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: max-content;
+    padding: 5px 10px;
+    color: $main-button-text-color;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  &:hover::after {
+    display: block;
+    content: "Натисніть, щоб зателефонувати";
+  }
+}
+
+.address-part {
+  width: 139px;
+  .address-link {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: none;
+      width: max-content;
+      padding: 5px 10px;
+      color: $main-button-text-color;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    &:hover::after {
+      display: block;
+      content: "Відкрити на карті";
+    }
+  }
+}
+.line{
+  border-top: 1px solid $footer-line-color;
+  width: 837px;
+  position: absolute;
+  top: 10px;
+  left: 506px;
+}
+.line-block{
+  display: flex;
+  padding-left: 336px;
+  position: relative;
+  padding-bottom: 42px;
+}
+.logo-txt{
+  width: 200px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.point{
+  font-family: 'Blacker Sans Display Trial';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0.05em;
+}
+.title-social, .title-address, .title-phone{
+  padding-bottom: 26px;
+}
+.letter{
+  font-family: 'Santral-Book';
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+.info-holder{
+  padding-bottom: 108px;
+}

@@ -146,5 +146,7 @@ add_action('my_hook_for_course', 'someMyFunc');
 
 
 //acf_add_options_page('Instagram');
+//acf_add_options_page('Header');
+acf_add_options_page('Footer');
 
 

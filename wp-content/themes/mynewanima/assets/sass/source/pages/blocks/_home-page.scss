@@ -259,11 +259,11 @@ a{
     max-width: 50%;
     flex: 0 0 50%;
     .sale-part{
-      padding-left: 33px;
+      padding-left: 130px;
       >a{
         font-family: 'Blacker Sans Display Trial', serif;
         font-style: normal;
-        font-weight: 400;
+        font-weight: $font-weight__400;
         font-size: 52px;
         line-height: 100%;
         text-align: center;
@@ -272,17 +272,18 @@ a{
       }
     }
     .price-part{
+      padding-left: 100px;
       >a{
-        font-family: 'Santral';
+        font-family: $font-family__santral;
         font-style: normal;
-        font-weight: 200;
+        font-weight: $font-weight__small;
         font-size: 28px;
         line-height: 150%;
         text-align: center;
       }
     }
     .discount-btn{
-      padding-left: 112px;
+      padding-left: 220px;
     }
   }
   img{
@@ -307,7 +308,7 @@ a{
     left: 157px;
   }
 }
-
+//
 .showroom-title{
   padding: 0 !important;
   >h1, .a{
@@ -318,17 +319,20 @@ a{
 .title2{
   font-family: 'Blacker Sans Display Trial';
   font-style: normal;
-  font-weight: 300;
+  font-weight: $font-weight__light;
   font-size: 75px;
   line-height: 100%;
   margin: 0;
 }
 .txt-showroom{
-  font-family: 'Santral';
+  font-family: $font-family__santral;
   font-style: normal;
-  font-weight: 200;
-  font-size: 16px;
+  font-weight: $font-weight__small;
+  font-size: $font-size__base;
   line-height: 150%;
+}
+.txt-showroom-part{
+  padding-left: 0 !important;
 }
 .showroom-part{
   margin-right: 178px;
@@ -343,11 +347,12 @@ a{
 //
 .insta-block{
   margin-bottom: 200px;
+  margin-top: 55px;
 }
 .insta-title{
   display: flex;
   justify-content: center;
-  padding: 200px 0 32px ;
+  padding-bottom: 32px ;
   margin: 0;
 }
 .link-group{
@@ -358,7 +363,7 @@ a{
 
 //insta slider//
 .slider-wrapper {
-  height: 350px;
+  height: 525px;
   //width: 90%;
   max-width: 1387px;
   margin: 0 auto;

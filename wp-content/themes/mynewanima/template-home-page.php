@@ -207,9 +207,9 @@ $txtShowroom = $heroShowroom['txt_showroom'];
             </div>
 <?php
 $heroInstagram = get_field('insta_block');
-$instaTitle = $heroInstagram ['insta_title'];
-$instaSub = $heroInstagram ['insta_subtitle'];
-$instLink = $heroInstagram ['insta_link'];
+$instaTitle = $heroInstagram['insta_title'];
+$instaSub = $heroInstagram['insta_subtitle'];
+$instLink = $heroInstagram['insta_link'];
 ?>
             <div class="insta-block">
                 <div class="centered">
@@ -248,16 +248,15 @@ $instLink = $heroInstagram ['insta_link'];
                 </div>
             </div>
 
-
-
             <?php get_footer();?>
+
         </div>
     </div>
-<!--    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
-<!--    <script src="assets/js/lib/slick.min.js"></script>-->
-<!--    <script src="assets/js/slider-slick.js"></script>-->
+
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<!--    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </main>
+
+
+

@@ -10,9 +10,9 @@
 	<?php wp_head(); ?>
 </head>
 <?php
-$bodyClasses = ($args['body_classes'] ?? '');
+//$bodyClasses = ($args['body_classes'] ?? '');
 ?>
 <body>
-<?php body_class($bodyClasses); ?>
-</body>
-</html>
+<?php //body_class($bodyClasses); ?>
+
+
