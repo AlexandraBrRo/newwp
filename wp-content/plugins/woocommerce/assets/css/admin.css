@@ -945,7 +945,7 @@
 #variable_product_options .notice {
   display: flex;
   margin: 10px;
-  background-color: #fcfae8;
+  background-color: #ffffff;
 }
 #variable_product_options #message > p a,
 #inventory_product_data .notice > p a,
@@ -990,14 +990,75 @@
   display: unset;
 }
 
+/**
+  * Variations related variables
+  */
 #variable_product_options .form-row select {
   max-width: 100%;
 }
-#variable_product_options .toolbar-top .button {
+#variable_product_options .variation_actions {
+  max-width: 131px;
+}
+#variable_product_options .toolbar-top .button,
+#variable_product_options .toolbar-top .select {
   margin: 1px;
+}
+#variable_product_options .add-variation-container, #variable_product_options .add-attributes-container {
+  box-sizing: border-box;
+  display: flex;
+  padding: 32px 0;
+  height: 360px;
+}
+#variable_product_options .add-variation-container p, #variable_product_options .add-attributes-container .add-attributes-message p {
+  width: 90%;
+  max-width: 544px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+#variable_product_options .add-attributes-container {
+  align-items: center;
+}
+#variable_product_options .add-attributes-container a {
+  text-decoration: none;
+}
+#variable_product_options .add-attributes-container a[target=_blank]::after {
+  content: url("../images/icons/external-link.svg");
+  margin-left: 2px;
+  vertical-align: sub;
+}
+#variable_product_options .add-attributes-container .add-attributes-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+#variable_product_options .add-variation-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+}
+#variable_product_options .add-variation-container .arrow-image-wrapper {
+  position: absolute;
+  top: 10px;
+  left: 87px;
+}
+#variable_product_options .add-variation-container.hidden {
+  display: none;
 }
 
 #product_attributes .add-global-attribute-container {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+}
+#product_attributes .add-global-attribute-container.hidden {
+  display: none;
+}
+#product_attributes .add-global-attribute-container .message {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -1005,24 +1066,22 @@
   align-items: center;
   padding: 32px 0px;
   gap: 24px;
-  height: 360px;
+  flex: 1;
 }
 @media screen and (max-width: 782px) {
-  #product_attributes .add-global-attribute-container button {
+  #product_attributes .add-global-attribute-container .message button {
     vertical-align: top;
   }
 }
-#product_attributes .add-global-attribute-container p {
+#product_attributes .add-global-attribute-container .message p {
   width: 90%;
   max-width: 544px;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
 }
-#product_attributes .add-global-attribute-container.hidden {
-  display: none;
-}
 #product_attributes .toolbar-top .button,
+#product_attributes .toolbar-top .attribute_taxonomy,
 #product_attributes .toolbar-top .select2-container {
   margin: 1px;
 }
@@ -5803,6 +5862,7 @@ img.help_tip {
 .wc-metaboxes-wrapper .wc-metabox h3 a.delete,
 .wc-metaboxes-wrapper .wc-metabox h3 a.edit {
   float: right;
+  margin-right: 12px;
 }
 .wc-metaboxes-wrapper .wc-metabox h3 a.delete {
   color: red;
@@ -5832,7 +5892,7 @@ img.help_tip {
 }
 .wc-metaboxes-wrapper .wc-metabox h3 .handlediv {
   background-position: 6px 5px !important;
-  visibility: hidden;
+  margin: 4px 0 -1px !important;
   height: 26px;
 }
 .wc-metaboxes-wrapper .wc-metabox h3.fixed {
@@ -5844,10 +5904,8 @@ img.help_tip {
 }
 .wc-metaboxes-wrapper .wc-metabox.woocommerce_attribute h3 a.delete,
 .wc-metaboxes-wrapper .wc-metabox.woocommerce_attribute h3 a.edit,
-.wc-metaboxes-wrapper .wc-metabox.woocommerce_attribute h3 .handlediv,
 .wc-metaboxes-wrapper .wc-metabox.woocommerce_attribute h3 .sort, .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 a.delete,
 .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 a.edit,
-.wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 .handlediv,
 .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 .sort {
   margin-top: 0.25em;
 }
@@ -5855,11 +5913,6 @@ img.help_tip {
 .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 a.edit,
 .wc-metaboxes-wrapper .wc-metabox.woocommerce_variation h3 .sort {
   margin-top: 0.45em;
-}
-.wc-metaboxes-wrapper .wc-metabox h3:hover a.delete,
-.wc-metaboxes-wrapper .wc-metabox h3:hover .handlediv, .wc-metaboxes-wrapper .wc-metabox.ui-sortable-helper a.delete,
-.wc-metaboxes-wrapper .wc-metabox.ui-sortable-helper .handlediv {
-  visibility: visible;
 }
 .wc-metaboxes-wrapper .wc-metabox table {
   width: 100%;

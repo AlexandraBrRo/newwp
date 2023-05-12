@@ -566,8 +566,18 @@ ul.wc-tabs li a {
   font-size: var(--wp--preset--font-size--small);
   margin-left: 1em;
 }
-.woocommerce-Tabs-panel h2 {
+.woocommerce-Tabs-panel h2:first-of-type {
   display: none;
+}
+.woocommerce-Tabs-panel table.woocommerce-product-attributes tbody td, .woocommerce-Tabs-panel table.woocommerce-product-attributes tbody th {
+  padding: 0.2rem 0.2rem 0.2rem 0;
+}
+.woocommerce-Tabs-panel table.woocommerce-product-attributes tbody td p, .woocommerce-Tabs-panel table.woocommerce-product-attributes tbody th p {
+  margin: 0;
+}
+.woocommerce-Tabs-panel table.woocommerce-product-attributes tbody th {
+  text-align: left;
+  padding-right: 1rem;
 }
 
 /**

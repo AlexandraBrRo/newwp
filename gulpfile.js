@@ -21,11 +21,29 @@ var onError = function (err) {
 gulp.task('styles', function () {
     var stream = gulp
         .src([
-            './wp-content/themes/mynewanima/assets/sass/styles.scss'
+            './wp-content/themes/anima-childJevel/assets/sass/styles.scss'
         ])
         .pipe(plumber({errorHandler: onError}))
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError));
     return stream
-        .pipe(gulp.dest('./wp-content/themes/mynewanima/assets/css'));
+        .pipe(gulp.dest('./wp-content/themes/anima-childJevel/assets/css'));
 
 });
+
+
+
+
+// var gulp = require('gulp');
+// var sass = require('gulp-sass')(require('sass'));
+//
+// gulp.task('sass', function () {
+//     return gulp.src('assets/sass/styles.scss')
+//         .pipe(sass().on('error', sass.logError))
+//         .pipe(gulp.dest('assets/css'));
+// });
+//
+// gulp.task('watch', function () {
+//     gulp.watch('assets/sass/**/*.scss', gulp.series('sass'));
+// });
+//
+// gulp.task('default', gulp.series('sass', 'watch'));
