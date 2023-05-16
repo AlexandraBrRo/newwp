@@ -677,3 +677,6 @@ function wpcf7_not_allowed_to_edit( $page, $action, $object ) {
 		esc_html( $message )
 	);
 }
+
+
+
