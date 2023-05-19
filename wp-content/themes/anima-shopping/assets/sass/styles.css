@@ -1,12 +1,12 @@
 @charset "UTF-8";
 @font-face {
   font-family: santral;
-  src: url("/wp-content/themes/anima-childJevel/assets/fonts/santral");
+  src: url("/wp-content/themes/anima-shopping/assets/fonts/santral");
   font-weight: normal;
 }
 @font-face {
   font-family: santral;
-  src: url("/wp-content/themes/anima-childJevel/assets/fonts/santral");
+  src: url("/wp-content/themes/anima-shopping/assets/fonts/santral");
   font-weight: normal;
 }
 /**
@@ -177,6 +177,56 @@ a {
   padding-left: 110px;
 }
 
+/*owl*/
+.item {
+  display: flex;
+  position: relative;
+  padding-top: 90%;
+}
+.item .img-product {
+  position: absolute;
+}
+.item .img-product-1 {
+  bottom: 388px;
+  left: 110px;
+}
+.item .img-product-2 {
+  top: 16px;
+  left: 509px;
+}
+.item .img-product-3 {
+  bottom: 120px;
+  left: 608px;
+}
+.item .img-product-4 {
+  right: 110px;
+  top: 441px;
+}
+
+.owl-nav {
+  position: relative;
+  padding: 0 50px;
+}
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  top: -575px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  cursor: pointer;
+}
+.owl-nav .owl-prev {
+  right: 82px;
+  background-image: url("../images/svg/arrow_left.svg");
+}
+.owl-nav .owl-next {
+  right: 104px;
+  background-image: url("../images/svg/arrow_right.svg");
+}
+
 /*slick slider*/
 .slick-slider {
   display: flex;
@@ -188,6 +238,10 @@ a {
 
 .slick-list {
   overflow: hidden;
+}
+
+.rings-carousel {
+  display: flex;
 }
 
 .arrivals-carousel {
@@ -732,6 +786,56 @@ a {
   padding-left: 110px;
 }
 
+/*owl*/
+.item {
+  display: flex;
+  position: relative;
+  padding-top: 90%;
+}
+.item .img-product {
+  position: absolute;
+}
+.item .img-product-1 {
+  bottom: 388px;
+  left: 110px;
+}
+.item .img-product-2 {
+  top: 16px;
+  left: 509px;
+}
+.item .img-product-3 {
+  bottom: 120px;
+  left: 608px;
+}
+.item .img-product-4 {
+  right: 110px;
+  top: 441px;
+}
+
+.owl-nav {
+  position: relative;
+  padding: 0 50px;
+}
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
+  top: -575px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  cursor: pointer;
+}
+.owl-nav .owl-prev {
+  right: 82px;
+  background-image: url("../images/svg/arrow_left.svg");
+}
+.owl-nav .owl-next {
+  right: 104px;
+  background-image: url("../images/svg/arrow_right.svg");
+}
+
 /*slick slider*/
 .slick-slider {
   display: flex;
@@ -743,6 +847,10 @@ a {
 
 .slick-list {
   overflow: hidden;
+}
+
+.rings-carousel {
+  display: flex;
 }
 
 .arrivals-carousel {

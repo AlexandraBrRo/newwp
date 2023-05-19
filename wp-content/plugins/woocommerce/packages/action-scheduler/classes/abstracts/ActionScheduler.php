@@ -1,4 +1,6 @@
-<?php
+<?php /** @noinspection ALL */
+
+/** @noinspection ForgottenDebugOutputInspection */
 
 use Action_Scheduler\WP_CLI\Migration_Command;
 use Action_Scheduler\Migration\Controller;
@@ -188,8 +190,9 @@ abstract class ActionScheduler {
 	 * Check whether the AS data store has been initialized.
 	 *
 	 * @param string $function_name The name of the function being called. Optional. Default `null`.
+	 *
 	 * @return bool
-	 */
+	 * @noinspection ForgottenDebugOutputInspection*/
 	public static function is_initialized( $function_name = null ) {
 		if ( ! self::$data_store_initialized && ! empty( $function_name ) ) {
 			$message = sprintf( __( '%s() was called before the Action Scheduler data store was initialized', 'woocommerce' ), esc_attr( $function_name ) );

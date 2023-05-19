@@ -200,9 +200,37 @@ function my_custom_function() {
 
 add_action('wp_enqueue_scripts', 'my_custom_function');
 
+require_once (trailingslashit(get_template_directory()) . '/inc/custom-addition/class-customize.php');
+
+$des = get_field('description');
+add_filter('woocommerce_product_tabs', 'woo_remove_product_tabs', 100);
+
+function woo_remove_product_tabs($tabs){
+	$tabs['delivery_information']['title'] = __('Доставка новою поштою');
+	$tabs['delivery_information']['callback'] = 'woo_custom_description_tab_content';
+
+	return $tabs;
+}
+
+
+function woo_custom_description_tab_content(){
+	echo '<h2>Custom Description</h2>';
+	echo '<p>'. get_field('description') .'</p>';
+}
+
+function enqueue_owl_carousel_assets() {
+	// Підключення стилів Owl Carousel
+	wp_enqueue_style('owl-carousel', get_stylesheet_directory_uri() . '/assets/css/owl.carousel.css');
+
+	// Підключення скриптів Owl Carousel
+	wp_enqueue_script('owl-carousel', get_stylesheet_directory_uri() . '/assets/js/owl.carousel.min.js', array('jquery'), '1.0.0', true);
+}
+add_action('wp_enqueue_scripts', 'enqueue_owl_carousel_assets');
 
 
 
 acf_add_options_page('Header');
 acf_add_options_page('Insta');
 acf_add_options_page('Footer');
+
+

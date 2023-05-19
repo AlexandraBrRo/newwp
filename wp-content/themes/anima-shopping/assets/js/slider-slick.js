@@ -1,40 +1,5 @@
 
 $(document).ready(function (){
-    $('.arrivals-carousel').slick({
-        arrows:true,
-        slidesToShow:4,
-        slidesToScroll:4,
-        speed:1000,
-        easing:'ease',
-        infinitive: true,
-        autoPlay:true,
-        autoplaySpeed: 1500,
-        pauseOnFocus:true,
-        pauseOnHover: true,
-        pauseOnDotsHover:true,
-        draggable: false,
-        swipe:true,
-        slidesPerRow:1,
-        responsive:[
-            {
-                breakpoint: 768,
-                settings:{
-                    sliderToShow:2,
-                    slidesToScroll:1,
-
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    sliderToShow: 1,
-                    slidesToScroll: 1,
-
-                },
-            }
-        ],
-        mobileFirst:false,
-        // appendArrows:$('.slick-button')
-    });
 
     $('.slider-wrapper').slick({
         infinite: true,
@@ -53,4 +18,23 @@ $(document).ready(function (){
     });
 });
 
-
+$(document).ready(function() {
+    $(".owl-carousel").owlCarousel({
+        items: 1,
+        nav: true,
+        navText: ['<button class="owl-prev">Prev</button>', '<button class="owl-next">Next</button>'],
+        dots:  false,
+        loop: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 1
+            },
+            992: {
+                items: 1
+            }
+        }
+    });
+});
