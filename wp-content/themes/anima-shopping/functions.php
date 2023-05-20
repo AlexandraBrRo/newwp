@@ -81,33 +81,81 @@ function add_post_type_jewerly() {
 			'title', 'thumbnail', 'editor', 'custom-fields'
 		)
 	));
+	register_post_type('earring', array(
+		'labels'=>array(
+			'name' => __('Сережки'),
+			'singular_name' => __('Сережки'),
+			'add_new' => __('Додати сережки'),
+			'edit_item' => __('Редагувати сережки')
+		),
+		'public' => true,
+		'hierarchical' => true,
+		'has_archive' => true,
+		'menu_icon' => 'dashicons-awards',
+		'menu_position' => 6,
+		'supports' => array(
+			'title', 'thumbnail', 'editor', 'custom-fields'
+		)
+	));
+	register_post_type('cuffs', array(
+		'labels'=>array(
+			'name' => __('Браслети'),
+			'singular_name' => __('Браслет'),
+			'add_new' => __('Додати браслет'),
+			'edit_item' => __('Редагувати браслет')
+		),
+		'public' => true,
+		'hierarchical' => true,
+		'has_archive' => true,
+		'menu_icon' => 'dashicons-awards',
+		'menu_position' => 7,
+		'supports' => array(
+			'title', 'thumbnail', 'editor', 'custom-fields'
+		)
+	));
+	register_post_type('strands', array(
+		'labels'=>array(
+			'name' => __('Підвіска'),
+			'singular_name' => __('Підвіска'),
+			'add_new' => __('Додати підвіску'),
+			'edit_item' => __('Редагувати підвіску')
+		),
+		'public' => true,
+		'hierarchical' => true,
+		'has_archive' => true,
+		'menu_icon' => 'dashicons-awards',
+		'menu_position' => 8,
+		'supports' => array(
+			'title', 'thumbnail', 'editor', 'custom-fields'
+		)
+	));
 
-	register_taxonomy(
-		'material',
-		'rings',
-		array(
-			'label' => __('метал'),
-			'rewrite' => array('slug' => 'metall'),
-			'hierarchical' => true,
-		)
-	);
-	register_taxonomy(
-		'size',
-		'rings',
-		array(
-			'label' => __('Розмір'),
-			'hierarchical' => true,
-		)
-	);
-	register_taxonomy(
-		'stone',
-		'rings',
-		array(
-			'label' => __('камінь'),
-			'hierarchical' => true,
-
-		)
-	);
+//	register_taxonomy(
+//		'material',
+//		'rings',
+//		array(
+//			'label' => __('метал'),
+//			'rewrite' => array('slug' => 'metall'),
+//			'hierarchical' => true,
+//		)
+//	);
+//	register_taxonomy(
+//		'size',
+//		'rings',
+//		array(
+//			'label' => __('Розмір'),
+//			'hierarchical' => true,
+//		)
+//	);
+//	register_taxonomy(
+//		'stone',
+//		'rings',
+//		array(
+//			'label' => __('камінь'),
+//			'hierarchical' => true,
+//
+//		)
+//	);
 }
 add_action('init','add_post_type_jewerly');
 

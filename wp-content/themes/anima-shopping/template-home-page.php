@@ -91,7 +91,6 @@ $linkBtn     = get_field( 'link_button', 'options' );
 			?>
             <div class="arrivals-block">
                 <div class="centered">
-
                     <div class="arrivals-carousel-block">
                         <div class="about-product">
                             <h1 class="title title-arrivals"><?= $newArrivalTitle ?></h1>
@@ -107,7 +106,7 @@ $linkBtn     = get_field( 'link_button', 'options' );
 		                        <?php
 		                        foreach ( $check as $i ) {
 			                        ?>
-                                    <div class="item" data-dot="<button><?= $i['category_name']->name ?></button>">
+                                    <div class="item item-arriwals" data-dot="<button><?= $i['category_name']->name ?></button>">
 				                        <?php
 				                        $it = 1;
 				                        foreach ( $i['product'] as $p ) {
@@ -125,7 +124,6 @@ $linkBtn     = get_field( 'link_button', 'options' );
 		                        ?>
                             </div>
                         </div>
-
                         <div class="btn-arrivals">
                             <a class="main-btn btn-border" href="<?= $arrivalsBtn['url'] ?>"
                                target="<?= $arrivalsBtn['target'] ?>">View all arrivals</a>
@@ -145,34 +143,34 @@ $linkBtn     = get_field( 'link_button', 'options' );
                     </div>
                     <div class="collection-img-block">
                         <div class="collection-img">
-                            <img class="img-left" src="http://newwp/wp-content/uploads/2023/04/collections.png" alt="">
-                            <a class="img-left-txt">Golden Glow</a>
+                            <a href=" http://newwp/strands/"><img class="img-left" src="http://newwp/wp-content/uploads/2023/04/collections.png" alt=""></a>
+                            <a class="img-left-txt" href=" http://newwp/strands/">Golden Glow</a>
                         </div>
                         <div class="collection-img center-img-part">
-                            <img class="img-center" src="http://newwp/wp-content/uploads/2023/04/collections1.png"
-                                 alt="">
-                            <a class="img-center-txt"> Diamonds</a>
-                            <img class="img-center2" src="http://newwp/wp-content/uploads/2023/04/collections2.png"
-                                 alt="">
-                            <a class="img-center2-txt">Fabulous Moments</a>
+                            <a href="http://newwp/shop/rings/"><img class="img-center" src="http://newwp/wp-content/uploads/2023/04/collections1.png" alt=""></a>
+                            <a class="img-center-txt" href="http://newwp/shop/rings/">Diamonds</a>
+                            <a href=" http://newwp/cuffs/"><img class="img-center2" src="http://newwp/wp-content/uploads/2023/04/collections2.png" alt=""></a>
+                            <a class="img-center2-txt" href=" http://newwp/cuffs/">Fabulous Moments</a>
                         </div>
-                        <div class="collection-img ">
-                            <img class="img-right" src="http://newwp/wp-content/uploads/2023/04/collections3.png"
-                                 alt="">
-                            <a class="img-right-txt"> Color Theory</a>
-                            <img class="img-right2" src="http://newwp/wp-content/uploads/2023/04/collections4.png"
-                                 alt="">
-                            <a class="img-right2-txt">Gentle Hugs</a>
+                        <div class="collection-img">
+                            <a href="http://newwp/shop/rings/"><img class="img-right" src="http://newwp/wp-content/uploads/2023/04/collections3.png" alt=""></a>
+                            <a class="img-right-txt" href="http://newwp/shop/rings/">Color Theory</a>
+                            <a href=" http://newwp/earring"><img class="img-right2" src="http://newwp/wp-content/uploads/2023/04/collections4.png" alt=""></a>
+                            <a class="img-right2-txt" href=" http://newwp/earring">Gentle Hugs</a>
                         </div>
-
                     </div>
+<!--                    <div class="btn-arrivals collection-btn">-->
+<!--                        <a class="main-btn btn-border" href="--><?//= $arrivalsBtn['url'] ?><!--"-->
+<!--                           target="--><?//= $arrivalsBtn['target'] ?><!--">View all collections</a>-->
+<!--                    </div>-->
                     <div class="btn-arrivals collection-btn">
-                        <a class="main-btn btn-border" href="<?= $arrivalsBtn['url'] ?>"
-                           target="<?= $arrivalsBtn['target'] ?>">View all collections</a>
+                        <a class="main-btn btn-border" href="<?php echo get_post_type_archive_link('product'); ?>" target="<?php echo $arrivalsBtn['target']; ?>">View all collections</a>
                     </div>
+
                 </div>
             </div>
-			<?php
+
+            <?php
 			$heroFavorites  = get_field( 'hero_favorites' );
 			$titleFavorites = $heroFavorites['title_favorites'];
 			?>
@@ -181,7 +179,35 @@ $linkBtn     = get_field( 'link_button', 'options' );
                     <div class="title-favorites-block">
                         <h1 class="title"><?= $titleFavorites ?></h1>
                     </div>
-
+                    <!-- New favorites carousel -->
+                    <div class="wrapper-carousel">
+                        <div id="owl-favorites" class="owl-carousel owl-theme" style="display: flex; flex-wrap: nowrap;">
+			                <?php
+			                foreach ($check as $i) {
+				                ?>
+                                <div class="item item-favorites">
+					                <?php
+					                $it = 1;
+					                foreach ($i['product'] as $p) {
+						                $image_url = get_the_post_thumbnail_url($p->ID);
+						                $product_title = get_the_title($p->ID);
+						                $product_price = get_post_meta($p->ID, 'product_price', true);
+						                ?>
+                                        <div class="product-item">
+                                            <a href=""><img class="product-image" src="<?= $image_url ?>" alt="<?= $product_title ?>"></a>
+                                            <h3 class="product-title"><?= $product_title ?></h3>
+                                            <p class="product-price"><?= $product_price ?></p>
+                                        </div>
+						                <?php
+						                $it++;
+					                }
+					                ?>
+                                </div>
+				                <?php
+			                }
+			                ?>
+                        </div>
+                    </div>
                     <div class="btn-arrivals favorites-btn">
                         <a class="main-btn btn-border" href="<?= $arrivalsBtn['url'] ?>"
                            target="<?= $arrivalsBtn['target'] ?>">View all collections</a>

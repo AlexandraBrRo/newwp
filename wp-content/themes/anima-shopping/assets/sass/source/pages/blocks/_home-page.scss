@@ -1,10 +1,4 @@
 
-//main{
-//  max-width: 1920px;
-//}
-//.wrapper{
-//  max-width: 1723px;
-//}
 .background-wrapper{
   background-image: url("../images/animaJewelryBg.png");
   background-repeat: no-repeat;
@@ -89,6 +83,14 @@ a{
   }
 }
 //
+.arrivals-block{
+  position: relative;
+  .btn-arrivals{
+    position: absolute;
+    top: 897px;
+    right: 273px;
+  }
+}
 
 .about-product{
   display: flex;
@@ -97,7 +99,6 @@ a{
     padding-top: 100px;
   }
 }
-
 .title-arrivals{
   //width: 294px;
   width: 407px;
@@ -105,150 +106,105 @@ a{
   padding-left: 110px;
 }
 /*owl*/
-.item{
-  display: flex;
-  position: relative;
-  //height: 100%;
-  //max-height: 1016px;
-  padding-top: 90%;
+.owl-carousel {
+  .item {
+    display: flex;
+    position: relative;
+    //height: 100%;
+    //max-height: 1016px;
+    padding-top: 50%;
+  }
   .img-product{
     position: absolute;
+    width: 372px;
+    height: 372px;
+    overflow: hidden;
+    display: block;
+    img{
+      display: block;
+      //width: 100%;
+      //height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      //object-fit: cover;
+      position: absolute;
+    }
   }
   .img-product-1{
-    bottom: 388px;
+    bottom: 210px;
     left: 110px;
+
   }
   .img-product-2{
-    top: 16px;
-    left: 509px;
+    top: 342px;
+    left: 510px;
+
   }
   .img-product-3{
-    bottom: 120px;
-    left: 608px;
+    bottom: 353px;
+    left: 566px;
   }
   .img-product-4{
-    right: 110px;
-    top: 441px;
+    right: 39px;
+    top: 59px;
   }
 }
-.category-name {
-  // Розташування стрілок у контейнері
-}
-.owl-nav {
-  position: relative;
-  padding: 0 50px;
-  //.owl-prev,
-  //.owl-next {
-  //  padding: 5px 10px;
-  //  position: absolute;
-  //  cursor: pointer;
-  //  z-index: 1;
-  //}
-  //.owl-prev {
-  //  background-size: cover;
-  //  top: -575px;
-  //  right: 82px;
-  //  width: 32px;
-  //  height: 32px;
-  //  border: none;
-  //  background: url('../images/svg/arrow_left.svg') 0 0 / 100% no-repeat;
-  //}
-  //.owl-next {
-  //  background-size: cover;
-  //  top: -575px;
-  //  right: 104px;
-  //  width: 32px;
-  //  height: 32px;
-  //  border: none;
-  //  background: url('../images/svg/arrow_right.svg') 0 0 / 100% no-repeat;
-  //}
+
+  /* Розташування стрілок у контейнері*/
+
+.owl-nav{
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 75px;
   .owl-prev,
-  .owl-next {
-    top: -575px;
-    width: 32px;
-    height: 32px;
-    border: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    cursor: pointer;
+   .owl-next  {
+    width: 32px !important;
+    height: 32px !important;
+    border: 1px solid black !important;
+    border-radius: 50% !important;
+    margin: 0 5px !important;
+    background: none !important;
+    font-size: 0 !important;
+    text-indent: -9999px !important;
+    position: relative !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    &:hover{
+      background: none;
+    }
+    &:before{
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-bottom: 1px solid black;
+      border-left: 1px solid black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      margin-left: 3px;
+    }
   }
-
-  .owl-prev {
-    right: 82px;
-    background-image: url('../images/svg/arrow_left.svg');
-  }
-
-  .owl-next {
-    right: 104px;
-    background-image: url('../images/svg/arrow_right.svg');
-  }
-}
-//.owl-dot{
-//  button{
-//    background: none;
-//    border: none;
-//  }
-//  &.active>button{
-//    font-weight: bold;
-//  }
-//}
-
-
-/*slick slider*/
-
-.slick-slider{
-  display: flex;
-  //flex-wrap: wrap;
-}
-
-
-.slick-track{
-  display: flex;
-  //align-items: flex-start;
-}
-.slick-list{
-  overflow: hidden;
-}
-.rings-carousel{
-  display: flex;
-}
-.arrivals-carousel{
-  position: relative;
-  padding: 0 50px;
-  display: flex;
-  //flex: 0 0 auto;
-  img{
-    width: 100%;
-    display: block;
-    //height: auto;
-    //position: absolute;
-  }
-  .slick-arrow{
-    position: absolute;
-    top: 50%;
-    z-index: 10;
-    font-size: 0;
-    width: 32px;
-    height: 32px;
-  }
-  .slick-prev{
-    left: 1136px;
-    top: -44px;
-    border: none;
-    background: url('../images/svg/arrow_left.svg') 0 0 / 100% no-repeat;
-  }
-  .slick-next{
-    right: 162px;
-    top: -44px;
-    border: none;
-    background: url('../images/svg/arrow_right.svg') 0 0 / 100%  no-repeat;
+  .owl-next{
+    &:before{
+      transform: translate(-50%, -50%) rotate(215deg);
+      margin-left: 0;
+      margin-right: 3px;
+    }
   }
 }
-.slider-wrapper{
-  display: flex;
+
+.main-btn{
+  color: black;
 }
-//
 
 .btn-arrivals{
   display: flex;
@@ -265,9 +221,27 @@ a{
     border: 1px solid #000000;
     border-radius: 4px;
     padding: 0 37px;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -50%;
+      width: 200%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+      transform: translateX(-30%);
+      transition: transform 0.3s;
+    }
+    &:hover{
+      color: darkorange;
+    }
+    &:before{
+      transform: translateX(30%);
+    }
   }
 }
-//
+/* collection block*/
+
 .collections-block{
   margin-bottom: 187px;
 }
@@ -285,33 +259,73 @@ a{
   }
   .img-left-txt{
     position: absolute;
-    top: 559px;
-    left: 160px;
+    top: 502px;
+    left: 122px;
     z-index: 50;
+    font-family: 'Blacker Sans Display Trial';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 100%;
+    &:hover{
+      color: darkorange;
+    }
   }
   .img-center-txt{
     position: absolute;
-    top: 229px;
-    left: 133px;
+    top: 203px;
+    left: 32px;
     z-index: 50;
+    font-family: 'Blacker Sans Display Trial';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 100%;
+    &:hover{
+      color: darkorange;
+    }
   }
   .img-center2-txt{
     position: absolute;
-    top: 775px;
-    left: 252px;
+    top: 732px;
+    left: 105px;
     z-index: 50;
+    font-family: 'Blacker Sans Display Trial';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 100%;
+    &:hover{
+      color: darkorange;
+    }
   }
   .img-right-txt{
     position: absolute;
-    top: 396px;
-    left: 162px;
+    top: 363px;
+    left: 185px;
     z-index: 50;
+    font-family: 'Blacker Sans Display Trial';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 100%;
+    &:hover{
+      color: darkorange;
+    }
   }
   .img-right2-txt{
     position: absolute;
-    top: 943px;
-    left: 158px;
+    top: 900px;
+    left: 181px;
     z-index: 50;
+    font-family: 'Blacker Sans Display Trial';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 100%;
+    &:hover{
+      color: darkorange;
+    }
   }
   .center-img-part{
     padding: 0;
@@ -327,7 +341,8 @@ a{
   margin-top: -110px;
   margin-bottom: 100px;
 }
- //
+ /*Favorites part*/
+
 .favorites-block{
   margin-bottom: 200px;
 }
@@ -438,7 +453,8 @@ a{
   padding-bottom: 46px;
 }
 
-//
+/*insta block*/
+
 .insta-block{
   margin-bottom: 200px;
   margin-top: 55px;
@@ -456,6 +472,7 @@ a{
 }
 
 //insta slider//
+
 .slider-wrapper {
   height: 525px;
   //width: 90%;
